@@ -1,9 +1,8 @@
-import background from './Images/airepanels2.jpg'
-import background2 from './Images/airepanels4.jpg'
-import background3 from './Images/pv1.jpeg'
-import React from 'react'
-import './App.css'
-import logoViento from './logoViento.png'
+import background from './Images/airepanels2.jpg';
+import background2 from './Images/airepanels4.jpg';
+import background3 from './Images/pv1.jpeg';
+import React from 'react';
+import logoViento from './logoViento.png';
 
 class Bullet extends React.Component{
   constructor(props){

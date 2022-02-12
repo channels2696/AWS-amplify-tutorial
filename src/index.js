@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
-import './App.css';
 import AppHeader from './AppHeader';
 import Productos from './productos';
 import Empresarial from './empresarial';
@@ -11,6 +10,14 @@ import Home from './home';
 import reportWebVitals from './reportWebVitals';
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+    google: {
+      families:['Anton','Droid Sans']
+    }
+  });
+
 Amplify.configure(config);
 
 ReactDOM.render(
