@@ -10,9 +10,13 @@
     "aws-amplify": "^4.3.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-jss": "^10.9.0",
+    "react-resize-detector": "^7.0.0",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "^3.0.1",
     "uuid": "^7.0.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

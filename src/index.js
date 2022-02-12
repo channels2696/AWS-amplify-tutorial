@@ -1,16 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
-import App from './App';
+import AppHeader from './AppHeader';
+import Productos from './routes/productos';
+import Empresarial from './routes/empresarial';
+import Contactenos from './routes/contactenos';
+import Home from './home';
 import reportWebVitals from './reportWebVitals';
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
 
-
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AppHeader/>}>
+          <Route path="home" element={<Home/>}/>
+          <Route path="productos" element={<Productos />} />
+          <Route path="empresarial" element={<Empresarial />} />
+          <Route path="contactenos" element={<Contactenos />}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
