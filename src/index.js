@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
 import AppHeader from './AppHeader';
-import Productos from './routes/productos';
-import Empresarial from './routes/empresarial';
-import Contactenos from './routes/contactenos';
+import Productos from './productos';
+import Empresarial from './empresarial';
+import Contactenos from './contactenos';
 import Home from './home';
 import reportWebVitals from './reportWebVitals';
 import Amplify from 'aws-amplify';
@@ -16,8 +16,12 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AppHeader/>}>
-          <Route path="home" element={<Home/>}/>
+        <Route path="/" element={<div
+          style={{height:'100vh', backgroundColor:'dodgerblue'}}>
+                                <AppHeader/>
+                                <Home/>
+                                </div>}/>
+        <Route path="/nav" element={<AppHeader/>}>
           <Route path="productos" element={<Productos />} />
           <Route path="empresarial" element={<Empresarial />} />
           <Route path="contactenos" element={<Contactenos />}/>
