@@ -1,10 +1,10 @@
 import React, {useState, useEffect}from 'react';
-import a1 from './aire1.jpeg';
-import a2 from './aire2.jpeg';
-import a3 from './aire3.jpeg';
-import s1 from './ener1.jpeg';
-import s2 from './ener2.jpeg';
-import i1 from './inst1.jpeg';
+import a1 from './aire1.png';
+import a2 from './aire2.png';
+import a3 from './aire3.png';
+import s1 from './ener1.png';
+import s2 from './ener2.png';
+import i1 from './inst1.png';
 
 const mainDivS = {
   backgroundColor: 'dodgerblue',
@@ -113,13 +113,13 @@ class MultSlide extends React.Component{
           <span className='button' style={{...headerS}} onClick={() => this.handleInstaladores()}> Instaladores </span>
         </div>
         <div style={{display: 'flex'}}>
-        <div style={{backgroundColor:'dodgerblue'}}>
+        <div style={{backgroundColor:'white'}}>
 
            <img src={this.state.ArraySource[this.state.counter]}
             alt='Imagen de slideshow'
             className='slideImage'/>
 
-            <div style={{display:'flex', justifyContent: 'center'}}>
+            <div style={{display:'flex', justifyContent: 'center', backgroundColor:'white'}}>
               <button className='slideButton btnLeft'
                 onClick={() => this.handleClickLeft()}>
                 <i className='arrow left'></i>

@@ -12,6 +12,7 @@ import Amplify from 'aws-amplify';
 import config from './aws-exports';
 import WebFont from 'webfontloader';
 
+
 WebFont.load({
     google: {
       families:['Anton','Droid Sans']

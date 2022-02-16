@@ -39,13 +39,13 @@ class SlideImage extends React.Component{
 
   render(){
     return(
-      <div style={{backgroundColor:'transparent', borderStyle:'solid', borderColor: 'white',
+      <div style={{backgroundColor:'white', borderStyle:'solid', borderColor: 'white',
     borderTopStyle:'none', borderRadius:'10px'}}>
         <img src={this.state.ArraySource[this.state.counter]}
           alt='Imagen de slideshow'
           className='slideImage'/>
 
-          <div style={{display:'flex', justifyContent: 'center'}}>
+          <div style={{display:'flex', justifyContent: 'center', backgroundColor:'white'}}>
             <button className='slideButton btnLeft'
               onClick={() => this.handleClickLeft()}>
               <i className='arrow left'></i>
