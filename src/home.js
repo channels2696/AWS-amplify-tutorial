@@ -1,8 +1,9 @@
-import background from './Images/airepanels2.jpg';
-import background2 from './Images/airepanels4.jpg';
-import background3 from './Images/pv1.jpeg';
+import background from './airepanels2.jpeg';
+import background2 from './airepanels4.jpg';
+import background3 from './pv1.jpeg';
 import React from 'react';
 import logoViento from './logoViento.png';
+import SlideImage from './sliderImage';
 
 class Bullet extends React.Component{
   constructor(props){
@@ -49,77 +50,22 @@ class Bullet extends React.Component{
   }
 }
 
-class SlideImage extends React.Component{
-  constructor(props){
-    super(props);
-    this.state={
-      ArraySource: [background,background2,background3],
-      counter: 0,
-    };
-  }
-
-  handleClickRight(){
-    var count = this.state.counter;
-    var size = this.state.ArraySource.length - 1;
-    if (this.state.counter === size) {
-      count = 0;
-    } else {
-      count += 1;
-    };
-
-    this.setState({
-       counter: count,
-     });
-  }
-
-  handleClickLeft(){
-    var count = this.state.counter;
-    var size = this.state.ArraySource.length - 1;
-    if (this.state.counter === 0) {
-      count = size;
-    } else {
-      count -= 1;
-    };
-
-    this.setState({
-       counter: count,
-     });
-  }
-
-  render(){
-    return(
-      <div style={{backgroundColor:'orange',maxHeight:'60vh'}}>
-        <img src={this.state.ArraySource[this.state.counter]}
-          alt='Imagen de slideshow'
-          className='slideImage'/>
-
-        <button className='slideButton btnLeft'
-          onClick={() => this.handleClickLeft()}>
-          <i className='arrow left'></i>
-        </button>
-
-        <button className='slideButton btnRight'
-        onClick={() => this.handleClickRight()}>
-        <i className='arrow right'></i>
-        </button>
-      </div>
-    );
-  }
-}
 
 const HomePage = () => {
   return (
-    <div style={{backgroundColor:'dodgerblue'}}>
-      <SlideImage/>
+    <div style={{background: 'transparent'}}>
+     <div style={{display:'flex'}}>
+      <SlideImage b1={background} b2={background2} b3={background3}/>
       <div style={{color:'white', Height: '20vh'}}>
       <p style={{marginLeft:'10%',fontFamily:'Anton',fontSize:'2.5vh',color:'white'}}> Trabaja con nosotros,
       trabaja con expertos... </p>
       <Bullet name='Enfoque' message='Ofrecemos'/>
       <Bullet name='Servicios'  message='Diseñamos e instalamos proyectos a la medida, brindamos las soluciones mas inovadoras que requieran nuestros clientes.'/>
       <Bullet name='Productos' message='Importamos, distribuimos y mantenemos el equipo de mas alta calidad.'/>
+       </div>
       <img src={logoViento} alt='Logo inferior'
-      style={{position:'absolute', bottom:'6vh', right:'0' ,
-      marginRight:'40%',opacity:'60%', width:'40vh', height:'21.35vh'}}/>
+      style={{position:'static',marginTop:'30vh',right:'0', opacity:'60%',
+      width:'40vh', height:'21.35vh'}}/>
       </div>
     </div>
   );

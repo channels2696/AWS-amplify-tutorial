@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.main{
+  background-image: linear-gradient(dodgerblue, #66b3ff);
+}
 
 .button{
   background-color: transparent;
@@ -34,7 +37,7 @@ code {
 .bullets{
   background-color: transparent;
   color: white;
-  border: 2px solid orange;
+  border: 2px solid black;
   border-radius: 15px;
   font-size: 2vh;
   font-family: Droid Sans;
@@ -50,30 +53,22 @@ code {
 }
 
 .slideImage{
-  width: 100%;
-  height: 56.25%;
   opacity: 95%;
-  margin-top: 5px;
-  margin-bottom: 4px;
-  max-height: 56vh;
+  width: 100vh;
 }
 
 .slideButton{
-  position: absolute;
-  bottom: 60vh;
   width: 5vh;
   height: 5vh;
   border-radius: 50%;
   background-color: white;
-  border: solid 2px orange;
+  border: solid 2px black;
 }
 
 .btnRight{
-  right: 0;
 }
 
 .btnLeft{
-  left: 0;
 }
 
 .slideButton:active{

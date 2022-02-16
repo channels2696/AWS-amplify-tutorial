@@ -24,8 +24,8 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div
-          style={{height:'100vh', backgroundColor:'dodgerblue'}}>
+        <Route path="/" element={<div className='main'
+          style={{height:'100vh'}}>
                                 <AppHeader/>
                                 <Home/>
                                 </div>}/>

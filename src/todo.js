@@ -1,14 +1,20 @@
 
 
-  {/*   probar website en AWS y asegurar empezar en home
-        poblar contactenos y enviar info a aws
-        Hacer pagina admin para revisar info
-        Agregar pagina admin para agregar productos y subir a aws
-        usar info subida aws y mostrarla en website
+  {/*   image storage aws
+        subir ultima version aws y probar
         poblar pagina empresarial
+        poblar productos con fotos (slideimage)
         Modificar fotos, modificar mensaje bullets, y retroalimentacion
         Versiones para movil
         ZARPAR!!!!!!
+        info telefono/Correo
         Poner chatbox(flotante)
         add slideshow buttons below
-        Agregar redirect home   */}
+        Agregar redirect home
+        Agregar background logo contactanos
+
+        Reat
+        Hacer pagina admin revisar info
+        Hacer pagina admin subir imagenes
+        Hacer pagina admin agregar productos
+        */}
