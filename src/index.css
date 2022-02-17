@@ -12,7 +12,7 @@ code {
     monospace;
 }
 .main{
-  background-image: linear-gradient(dodgerblue, #66b3ff);
+  background-color: dodgerblue;
 }
 
 .button{
@@ -72,7 +72,7 @@ code {
 }
 
 .slideButton:active{
-  background-color: transparent;
+  background-color: dodgerblue;
 }
 
 .arrow {

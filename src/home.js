@@ -1,18 +1,18 @@
-import background from './airepanels2.png';
-import background2 from './airepanels4.png';
-import background3 from './pv1.png';
 import logoViento from './logoViento.png';
 import React from 'react';
 import SlideImage from './sliderImage';
+import {Storage} from 'aws-amplify';
+
+const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/"
 
 class Bullet extends React.Component{
   constructor(props){
     super(props);
     this.state ={
-      icon: '+ ',
-      name: this.props.name,
-      message: null,
-      changed: false,
+      icon: '- ',
+      name: '',
+      message: this.props.message,
+      changed: true,
     };
   }
 
@@ -51,15 +51,19 @@ class Bullet extends React.Component{
 }
 
 
-const HomePage = () => {
-  return (
+class HomePage extends React.Component{
+
+
+  render(){
+   return (
     <div style={{background: 'transparent'}}>
      <div style={{display:'flex'}}>
-      <SlideImage b1={background} b2={background2} b3={background3}/>
+      <SlideImage b1={accessUrl + "home1.png"} b2={accessUrl + "home2.png"} b3={accessUrl + "home3.png"}/>
+
       <div style={{color:'white', Height: '20vh'}}>
       <p style={{marginLeft:'10%',fontFamily:'Anton',fontSize:'2.5vh',color:'white'}}> Trabaja con nosotros,
       trabaja con expertos... </p>
-      <Bullet name='Enfoque' message='Ofrecemos'/>
+      <Bullet name="Enfoque" message='Ofrecemos productos de equipo solar y de climatización, inluyendo materiales y repuestos asociados.'/>
       <Bullet name='Servicios'  message='Diseñamos e instalamos proyectos a la medida, brindamos las soluciones mas inovadoras que requieran nuestros clientes.'/>
       <Bullet name='Productos' message='Importamos, distribuimos y mantenemos el equipo de mas alta calidad.'/>
        </div>
@@ -68,7 +72,8 @@ const HomePage = () => {
       width:'40vh', height:'21.35vh'}}/>
       </div>
     </div>
-  );
+   );
+ }
 };
 
 export default HomePage;

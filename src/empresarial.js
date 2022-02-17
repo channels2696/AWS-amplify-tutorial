@@ -1,10 +1,7 @@
 import React, {useState, useEffect}from 'react';
-import h1 from './hvacpr1.png';
-import h2 from './hvacpr2.png';
-import h3 from './hvacpr3.png';
-import s1 from './solpr1.png';
-import s2 from './solpr2.png';
-import s3 from './solpr3.png';
+
+
+const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/";
 
 const mainDivS = {
   backgroundColor: 'dodgerblue',
@@ -33,8 +30,8 @@ const msjAC = "Nuestros proyectos incluyen licitaciones publicas y proyectos pri
 const msjSolar = "Hemos realizado proyectos de mas de 350KW en zonas industriales y realizado estudios de decenas de Megavatios. Ahorrandole a nuestros clientes millones de lempiras anualmente. Ponte en contacto para ver como te podemos ayudar!"
 const estadoAC = "Proyectos de Climatización"
 const estadoSolar = "Proyectos Solares"
-const arrayAC = [h1,h2,h3]
-const arraySolar = [s1,s2,s3]
+const arrayAC = [accessUrl + "hvacpr1.png",accessUrl + "hvacpr2.png",accessUrl + "hvacpr3.png"]
+const arraySolar = [accessUrl + "solpr1.png",accessUrl + "solpr2.png",accessUrl + "solpr3.png"]
 const msjGeneral =  "Con varios años de experiencia en proyectos comerciales e industriales, puede contar con nosotros en entregarle proyectos de la mejor calidad del mercado. Cuente con nosotros para darle los mejores servicios de diseño, importación, instalación, supervisión, y hasta financiamiento."
 
 class MultSlide extends React.Component{

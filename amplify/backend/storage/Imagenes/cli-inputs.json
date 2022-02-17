@@ -1,0 +1,16 @@
+{
+  "resourceName": "Imagenes",
+  "policyUUID": "49af15a2",
+  "bucketName": "awswebsitereycaimgs",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

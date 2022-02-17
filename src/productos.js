@@ -1,10 +1,7 @@
 import React, {useState, useEffect}from 'react';
-import a1 from './aire1.png';
-import a2 from './aire2.png';
-import a3 from './aire3.png';
-import s1 from './ener1.png';
-import s2 from './ener2.png';
-import i1 from './inst1.png';
+
+
+const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/";
 
 const mainDivS = {
   backgroundColor: 'dodgerblue',
@@ -33,12 +30,12 @@ const tituloInst = "TODO TIPO de materiales y repuestos para aires"
 const tituloAires = "Los aires mas enfriantes!"
 const tituloEnergia = "Empieza a ahorrar YA"
 const descripInst = ""
-const descripAires = ""
+const descripAires = "Tenemos todo en aires residenciales, incluyendo capacidades de 12,000 BTU, 18,000 BTU, 24,000 BTU y más. Cotiza con nosotros marcas mundiales como LG, ECOX, y Samsung. Contactános!"
 const descripEnergia = ""
 const msjGeneral = ""
-const arrayInst = [i1,i1,i1]
-const arrayAC = [a1,a2,a3]
-const arraySolar = [s1,s2,s2]
+const arrayInst = [accessUrl + "inst1.png",accessUrl + "inst1.png",accessUrl + "inst1.png"]
+const arrayAC = [accessUrl + "aire1.png",accessUrl + "aire2.png",accessUrl + "aire3.png"]
+const arraySolar = [accessUrl + "ener1.png",accessUrl + "ener2.png",accessUrl + "ener1.png"]
 
 class MultSlide extends React.Component{
   constructor(props){
