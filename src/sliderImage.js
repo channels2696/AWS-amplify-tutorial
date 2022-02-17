@@ -39,8 +39,8 @@ class SlideImage extends React.Component{
 
   render(){
     return(
-      <div style={{backgroundColor:'white', borderStyle:'solid', borderColor: 'white',
-    borderTopStyle:'none', borderRadius:'10px'}}>
+      <div style={{borderStyle:'solid', borderColor: 'white',
+    borderTopStyle:'none', borderRadius:'10px', margin:'0'}}>
         <img src={this.state.ArraySource[this.state.counter]}
           alt='Imagen de slideshow'
           className='slideImage'/>
