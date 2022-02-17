@@ -1,8 +1,5 @@
 import logoViento from './logoViento.png';
 import React from 'react';
-import SlideImage from './sliderImage';
-
-
 
 
 const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home1.png"
