@@ -3,7 +3,7 @@ import React from 'react';
 import SlideImage from './sliderImage';
 import {Storage} from 'aws-amplify';
 
-const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/"
+const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home1.png"
 
 class Bullet extends React.Component{
   constructor(props){
@@ -52,18 +52,16 @@ class Bullet extends React.Component{
 
 
 class HomePage extends React.Component{
-
-
   render(){
    return (
     <div style={{background: 'transparent'}}>
      <div style={{display:'flex'}}>
-      <SlideImage b1={accessUrl + "home1.png"} b2={accessUrl + "home2.png"} b3={accessUrl + "home3.png"}/>
+      <img src={accessUrl}/>
 
       <div style={{color:'white', Height: '20vh'}}>
       <p style={{marginLeft:'10%',fontFamily:'Anton',fontSize:'2.5vh',color:'white'}}> Trabaja con nosotros,
       trabaja con expertos... </p>
-      <Bullet name="Enfoque" message='Ofrecemos productos de equipo solar y de climatización, inluyendo materiales y repuestos asociados.'/>
+      <Bullet name='Enfoque' message='Ofrecemos productos de equipo solar y de climatización, inluyendo materiales y repuestos asociados.'/>
       <Bullet name='Servicios'  message='Diseñamos e instalamos proyectos a la medida, brindamos las soluciones mas inovadoras que requieran nuestros clientes.'/>
       <Bullet name='Productos' message='Importamos, distribuimos y mantenemos el equipo de mas alta calidad.'/>
        </div>
