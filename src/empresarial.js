@@ -43,6 +43,7 @@ class MultSlide extends React.Component{
       descrip: msjAC,
       titulo: estadoAC,
       msjStatic: msjGeneral,
+      url: accessUrl + "hvacpr1.png"
     };
   }
 
@@ -57,6 +58,7 @@ class MultSlide extends React.Component{
 
     this.setState({
        counter: count,
+       url: this.state.ArraySource[count],
      });
   }
 
@@ -71,6 +73,7 @@ class MultSlide extends React.Component{
 
     this.setState({
        counter: count,
+       url: this.state.ArraySource[count],
      });
   }
 
@@ -79,6 +82,7 @@ class MultSlide extends React.Component{
       descrip: msjAC,
       titulo: estadoAC,
       ArraySource: arrayAC,
+      url: accessUrl + "hvacpr1.png",
     });
   }
 
@@ -87,6 +91,7 @@ class MultSlide extends React.Component{
       descrip: msjSolar,
       titulo: estadoSolar,
       ArraySource: arraySolar,
+      url: accessUrl + "solpr1.png",
     });
   }
 
@@ -101,7 +106,7 @@ class MultSlide extends React.Component{
         <div style={{display:'flex'}}>
         <div style={{backgroundColor:'white'}}>
 
-           <img src={this.state.ArraySource[this.state.counter]}
+           <img src={this.state.url}
             alt='Imagen de slideshow'
             className='slideImage'/>
 

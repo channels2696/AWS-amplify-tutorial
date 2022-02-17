@@ -1,7 +1,9 @@
 import logoViento from './logoViento.png';
 import React from 'react';
 import SlideImage from './sliderImage';
-import {Storage} from 'aws-amplify';
+
+
+
 
 const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home1.png"
 
@@ -52,11 +54,12 @@ class Bullet extends React.Component{
 
 
 class HomePage extends React.Component{
+
   render(){
    return (
     <div style={{background: 'transparent'}}>
-     <div style={{display:'flex'}}>
-      <img src={accessUrl}/>
+     <div style={{display:'flex', justifyContent:'center'}}>
+      <img style={{width:'100vh'}} src={accessUrl}/>
 
       <div style={{color:'white', Height: '20vh'}}>
       <p style={{marginLeft:'10%',fontFamily:'Anton',fontSize:'2.5vh',color:'white'}}> Trabaja con nosotros,
