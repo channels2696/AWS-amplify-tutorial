@@ -1,8 +1,30 @@
 import logoViento from './logoViento.png';
 import React from 'react';
 
-
 const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home1.png"
+const accessUrl2 = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home2.png"
+
+class ResponsiveImage extends React.Component{
+  constructor(props){
+    super(props);
+
+    if (window.innerWidth > 500){
+      this.state ={
+        url: accessUrl
+      }
+    } else {
+      this.state={
+        url: accessUrl2
+      };
+    };
+  }
+
+  render(){
+    return(
+   <img src={this.state.url} style={{width:'50%'}}/>
+ );
+}
+}
 
 class Bullet extends React.Component{
   constructor(props){
@@ -56,9 +78,9 @@ class HomePage extends React.Component{
    return (
     <div style={{background: 'transparent'}}>
      <div style={{display:'flex', justifyContent:'center'}}>
-      <img style={{width:'100vh'}} src={accessUrl}/>
+      <ResponsiveImage/>
 
-      <div style={{color:'white', Height: '20vh'}}>
+      <div style={{color:'white', width:'30%'}}>
       <p style={{marginLeft:'10%',fontFamily:'Anton',fontSize:'2.5vh',color:'white'}}> Trabaja con nosotros,
       trabaja con expertos... </p>
       <Bullet name='Enfoque' message='Ofrecemos productos de equipo solar y de climatización, inluyendo materiales y repuestos asociados.'/>
@@ -67,7 +89,7 @@ class HomePage extends React.Component{
        </div>
       <img src={logoViento} alt='Logo inferior'
       style={{position:'static',marginTop:'30vh',right:'0', opacity:'60%',
-      width:'40vh', height:'21.35vh'}}/>
+      width:'20%', height:'21.35vh'}}/>
       </div>
     </div>
    );
