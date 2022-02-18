@@ -1,8 +1,9 @@
 import logoViento from './logoViento.png';
+
 import React from 'react';
 
 const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home1.png"
-const accessUrl2 = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home2.png"
+const smallImg = ''
 
 class ResponsiveImage extends React.Component{
   constructor(props){
@@ -14,7 +15,7 @@ class ResponsiveImage extends React.Component{
       }
     } else {
       this.state={
-        url: accessUrl2
+        url: smallImg
       };
     };
   }
@@ -65,7 +66,7 @@ class Bullet extends React.Component{
         <button className='bullets' onClick={() => this.handleClick()}>
         {this.state.icon + this.state.name}
         </button>
-        <span style={{marginLeft: '15px'}}>{this.state.message}</span>
+        <p style={{marginLeft: '3vh'}}>{this.state.message}</p>
       </div>
     );
   }
@@ -73,11 +74,24 @@ class Bullet extends React.Component{
 
 
 class HomePage extends React.Component{
+  constructor(props){
+    super(props);
+
+    if (window.innerWidth > 500){
+      this.state ={
+        w: '20%'
+      }
+    } else {
+      this.state={
+        w: '0'
+      };
+    };
+  }
 
   render(){
    return (
-    <div style={{background: 'transparent'}}>
-     <div style={{display:'flex', justifyContent:'center'}}>
+    <div style={{backgroundColor: 'dodgerblue'}}>
+     <div style={{display:'flex', justifyContent:'start'}}>
       <ResponsiveImage/>
 
       <div style={{color:'white', width:'30%'}}>
@@ -87,9 +101,11 @@ class HomePage extends React.Component{
       <Bullet name='Servicios'  message='Diseñamos e instalamos proyectos a la medida, brindamos las soluciones mas inovadoras que requieran nuestros clientes.'/>
       <Bullet name='Productos' message='Importamos, distribuimos y mantenemos el equipo de mas alta calidad.'/>
        </div>
-      <img src={logoViento} alt='Logo inferior'
-      style={{position:'static',marginTop:'30vh',right:'0', opacity:'60%',
-      width:'20%', height:'21.35vh'}}/>
+      <div style={{width: this.state.w}}>
+        <img src={logoViento} alt='Logo inferior'
+        style={{position:'static',marginTop:'30vh',right:'0', opacity:'60%',
+        width:'80%', height:'21.35vh'}}/>
+      </div>
       </div>
     </div>
    );

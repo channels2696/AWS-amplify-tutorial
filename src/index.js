@@ -4,13 +4,14 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
 import AppHeader from './AppHeader';
 import Productos from './productos';
-import Empresarial from './empresarial';
 import Contactenos from './contactenos';
 import Home from './home';
 import reportWebVitals from './reportWebVitals';
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 import WebFont from 'webfontloader';
+import Climatizacion from './climatizacion';
+import Solar from './solar';
 
 
 WebFont.load({
@@ -32,8 +33,9 @@ ReactDOM.render(
                                 </div>}/>
         <Route path="/nav" element={<AppHeader/>}>
           <Route path="productos" element={<Productos />} />
-          <Route path="empresarial" element={<Empresarial />} />
+          <Route path="empresarial" element={<Climatizacion />}/>
           <Route path="contactenos" element={<Contactenos />}/>
+          <Route path="Solar" element={<Solar/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

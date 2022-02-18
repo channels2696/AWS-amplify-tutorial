@@ -1,13 +1,4 @@
-import React, {useState, useEffect}from 'react';
-
-
-const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/";
-
-const mainDivS = {
-  backgroundColor: 'dodgerblue',
-  height: '90vh',
-
-}
+import React from 'react';
 
 const headerS ={
   marginLeft: '5vh',
@@ -35,58 +26,46 @@ const msjGeneral =  "Con varios años de experiencia en proyectos comerciales e 
 class MultSlide extends React.Component{
   constructor(props){
     super(props);
-    this.state={
-      counter: 0,
-      descrip: msjAC,
-      titulo: estadoAC,
-      msjStatic: msjGeneral,
-      url: accessUrl + "hvacpr1.png"
+
+    if (window.innerWidth > 500){
+      this.state ={
+        w: '50%',
+        url: this.props.largeImg,
+        w2: '100vh',
+        msjG: this.props.msjGen,
+        titulo: this.props.titulo,
+        msjEsp: this.props.msgEspecifico,
+      }
+    } else {
+      this.state={
+        w: '100%',
+        url: this.props.SmallImg,
+        w2: '30vh',
+        msjG: this.props.msjGen,
+        titulo: this.props.titulo,
+        msjEsp: this.props.msgEspecifico,
+      };
     };
   }
-
-  handleAC(){
-    this.setState({
-      descrip: msjAC,
-      titulo: estadoAC,
-      url: accessUrl + "hvacpr1.png",
-    });
-  }
-
-  handleSolar(){
-    this.setState({
-      descrip: msjSolar,
-      titulo: estadoSolar,
-      url: accessUrl + "solpr1.png",
-    });
-  }
-
   render(){
     return(
-      <div style={{...mainDivS}}>
-        <div style={{...divStyle}}>
-          <span className='button' style={{...headerS}} onClick={() => this.handleAC()}> Climatización </span>
-          <span className='button' style={{...headerS}} onClick={() => this.handleSolar()}> Solar </span>
-          <span/>
-        </div>
-        <div style={{display:'flex'}}>
-        <div style={{backgroundColor:'dodgerblue'}}>
+      <div style={{display:'flex'}}>
+         <div style={{backgroundColor:'dodgerblue', width: this.state.w}}>
 
-           <img src={this.state.url}
-            alt='Imagen de slideshow'
-            className='slideImage'/>
+           <img src={this.state.url} style={{width: this.state.w2}}
+            alt='Imagen de slideshow'/>
         </div>
-        <div style={{backgroundColor: 'dodgerblue'}}>
-        <p style={{...proyectoS, ...headerS, fontSize:'2vh'}}>
-         {this.state.msjStatic}
-        </p>
-         <p style={{...proyectoS, ...headerS}}>
-           {this.state.titulo}
-           <p style={{...proyectoS, ...headerS, fontSize:'2vh'}}>
-           {this.state.descrip}
-           </p>
+         <div style={{backgroundColor: 'dodgerblue'}}>
+         <p style={{...proyectoS, ...headerS, fontSize:'2vh'}}>
+          {this.state.msjG}
          </p>
-        </div>
-        </div>
+          <p style={{...proyectoS, ...headerS}}>
+            {this.state.titulo}
+            <p style={{...proyectoS, ...headerS, fontSize:'2vh'}}>
+            {this.state.msjEsp}
+            </p>
+          </p>
+         </div>
       </div>
     );
   }
