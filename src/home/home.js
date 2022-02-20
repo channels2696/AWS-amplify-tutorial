@@ -3,7 +3,7 @@ import logoViento from './logoViento.png';
 import React from 'react';
 
 const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home1.png"
-const smallImg = ''
+const smallImg = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/smallHome.jpg"
 
 class ResponsiveImage extends React.Component{
   constructor(props){
@@ -31,10 +31,10 @@ class Bullet extends React.Component{
   constructor(props){
     super(props);
     this.state ={
-      icon: '- ',
-      name: '',
-      message: this.props.message,
-      changed: true,
+      icon: '+ ',
+      name: this.props.name,
+      message: null,
+      changed: false,
     };
   }
 
@@ -97,9 +97,9 @@ class HomePage extends React.Component{
       <div style={{color:'white', width:'30%'}}>
       <p style={{marginLeft:'10%',fontFamily:'Anton',fontSize:'2.5vh',color:'white'}}> Trabaja con nosotros,
       trabaja con expertos... </p>
-      <Bullet name='Enfoque' message='Ofrecemos productos de equipo solar y de climatización, inluyendo materiales y repuestos asociados.'/>
-      <Bullet name='Servicios'  message='Diseñamos e instalamos proyectos a la medida, brindamos las soluciones mas inovadoras que requieran nuestros clientes.'/>
-      <Bullet name='Productos' message='Importamos, distribuimos y mantenemos el equipo de mas alta calidad.'/>
+      <Bullet name='Proyectos' message='Diseñamos e instalamos proyectos solares y de climatización, brindamos las soluciones mas inovadoras que requieran nuestros clientes.'/>
+      <Bullet name='Servicios'  message='Brindamos servicios de diseño, importación, instalación, supervisión, y hasta financiamiento.'/>
+      <Bullet name='Productos' message='Distribuimos equipo de alta calidad, si eres instalador o cliente final, te encontrarás en buenas manos.'/>
        </div>
       <div style={{width: this.state.w}}>
         <img src={logoViento} alt='Logo inferior'

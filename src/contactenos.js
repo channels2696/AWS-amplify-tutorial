@@ -3,6 +3,7 @@ import {API} from 'aws-amplify';
 import {listTodos} from './graphql/queries';
 import { createTodo as createTodoMutation, deleteTodo as deleteTodoMutation } from './graphql/mutations';
 
+
 const divStyle = {
   display: 'flex',
   justifyContent: 'center',
