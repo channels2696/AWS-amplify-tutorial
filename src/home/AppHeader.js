@@ -25,7 +25,7 @@ render(){
       borderBottomStyle:'solid',borderColor:'white',borderWidth:'thin'}}>
         <img src={logo} alt="logo de Reyca" style={{height:'10vh',marginLeft:'5%'}}></img>
         <nav style={{position:'absolute',top:'1vh',right:'2vh'}}>
-          <Link className="button" to="/nav/productos/Aires/LG" style={{fontSize: this.state.w}}>Productos</Link>
+          <Link className="button" to="/nav/productos/Aires/dual" style={{fontSize: this.state.w}}>Productos</Link>
           <Link className="button" to="/nav/empresarial" style={{fontSize: this.state.w}}>Empresarial</Link>
           <Link className="button" to="/nav/contactenos" style={{fontSize: this.state.w}}>Contáctanos</Link>
         </nav>

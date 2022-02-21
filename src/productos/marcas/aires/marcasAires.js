@@ -17,7 +17,7 @@ render(){
   return (
   <div style={{backgroundColor: 'dodgerblue', display:'flex', justifyContent: 'center'}}>
     <span style={{...pStyle}}> Escoja una Marca: </span>
-    <Link className='button' to="/nav/productos/Aires/LG"> LG </Link>
+    <Link className='button' to="/nav/productos/Aires/dual"> LG </Link>
     <Link className='button' to="/nav/productos/Aires/Ecox"> Ecox </Link>
     <Link className='button' to="/nav/productos/Aires/Samsung"> Samsung </Link>
   </div>

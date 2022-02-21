@@ -15,9 +15,12 @@ import Solar from './empresarial/solar';
 import Aires from './productos/aires';
 import Energia from './productos/energia';
 import Instaladores from './productos/instaladores';
-import LG from './productos/marcas/aires/LG';
-import Ecox from './productos/marcas/aires/Ecox';
-import Samsung from './productos/marcas/aires/Samsung';
+import Ecox from './productos/marcas/aires/Ecox/Ecox';
+import Samsung from './productos/marcas/aires/Samsung/Samsung';
+import LG1 from './productos/marcas/aires/LG/dual';
+import LG2 from './productos/marcas/aires/LG/artcool';
+import LG3 from './productos/marcas/aires/LG/portatil';
+
 
 
 WebFont.load({
@@ -40,7 +43,9 @@ ReactDOM.render(
         <Route path="/nav" element={<AppHeader/>}>
           <Route path="productos" element={<Productos />}>
             <Route path="Aires" element={<Aires/>}>
-              <Route path="LG" element={<LG/>}/>
+              <Route path="dual" element={<LG1/>}/>
+              <Route path="artcool" element={<LG2/>}/>
+              <Route path="portatil" element={<LG3/>}/>
               <Route path="Ecox" element={<Ecox/>}/>
               <Route path="Samsung" element={<Samsung/>}/>
             </Route>
