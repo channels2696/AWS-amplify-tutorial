@@ -30,7 +30,7 @@ class MultSlide extends React.Component{
       <div>
       <div style={{backgroundColor: 'dodgerblue', display: 'flex', justifyContent: 'center'}}>
         <span style={{...pStyle}}> Escoja una Categoria: </span>
-        <Link className='button' to="/nav/productos/Aires/dual"> Aires </Link>
+        <Link className='button' to="/nav/productos/Aires/dualLG1"> Aires </Link>
         <Link className='button' to="/nav/productos/Energia"> Energía </Link>
         <Link className='button' to="/nav/productos/Instaladores"> Instaladores </Link>
       </div>

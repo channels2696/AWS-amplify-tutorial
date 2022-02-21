@@ -15,11 +15,19 @@ import Solar from './empresarial/solar';
 import Aires from './productos/aires';
 import Energia from './productos/energia';
 import Instaladores from './productos/instaladores';
-import Ecox from './productos/marcas/aires/Ecox/Ecox';
-import Samsung from './productos/marcas/aires/Samsung/Samsung';
-import LG1 from './productos/marcas/aires/LG/dual';
-import LG2 from './productos/marcas/aires/LG/artcool';
-import LG3 from './productos/marcas/aires/LG/portatil';
+import LGd1 from './productos/marcas/aires/LG/dualLG/dual1';
+import LGd2 from './productos/marcas/aires/LG/dualLG/dual2';
+import LGd3 from './productos/marcas/aires/LG/dualLG/dual3';
+import LGa1 from './productos/marcas/aires/LG/artcool/artcool1';
+import LGa2 from './productos/marcas/aires/LG/artcool/artcool2';
+import LGa3 from './productos/marcas/aires/LG/artcool/artcool3';
+import LG3 from './productos/marcas/aires/LG/portatil/portatil';
+import Ecox1 from './productos/marcas/aires/Ecox/ecox1';
+import Ecox2 from './productos/marcas/aires/Ecox/ecox2';
+import Ecox3 from './productos/marcas/aires/Ecox/ecox3';
+import Samsung1 from './productos/marcas/aires/Samsung/samsung1';
+import Samsung2 from './productos/marcas/aires/Samsung/samsung2';
+import Samsung3 from './productos/marcas/aires/Samsung/samsung3';
 
 
 
@@ -43,11 +51,19 @@ ReactDOM.render(
         <Route path="/nav" element={<AppHeader/>}>
           <Route path="productos" element={<Productos />}>
             <Route path="Aires" element={<Aires/>}>
-              <Route path="dual" element={<LG1/>}/>
-              <Route path="artcool" element={<LG2/>}/>
+              <Route path="dualLG1" element={<LGd1/>}/>
+              <Route path="dualLGd2" element={<LGd2/>}/>
+              <Route path="dualLGd3" element={<LGd3/>}/>
+              <Route path="artcool1" element={<LGa1/>}/>
+              <Route path="artcool2" element={<LGa2/>}/>
+              <Route path="artcool3" element={<LGa3/>}/>
               <Route path="portatil" element={<LG3/>}/>
-              <Route path="Ecox" element={<Ecox/>}/>
-              <Route path="Samsung" element={<Samsung/>}/>
+              <Route path="ecox1" element={<Ecox1/>}/>
+              <Route path="ecox2" element={<Ecox2/>}/>
+              <Route path="ecox3" element={<Ecox3/>}/>
+              <Route path="samsung1" element={<Samsung1/>}/>
+              <Route path="samsung2" element={<Samsung2/>}/>
+              <Route path="samsung3" element={<Samsung3/>}/>
             </Route>
             <Route path="Energia" element={<Energia/>}/>
             <Route path="Instaladores" element={<Instaladores/>}/>

@@ -23,9 +23,9 @@ class LG extends React.Component {
       bullet2: this.props.b2 ,
       bullet3: this.props.b3 ,
       bullet4:this.props.b4 ,
-      precioViejo: preciosV[0],
-      precioNuevo: preciosN[0],
-      capacidad: capacidades[0],
+      precioViejo: preciosV[this.props.pointer],
+      precioNuevo: preciosN[this.props.pointer],
+      capacidad: capacidades[this.props.pointer],
     };
   }
 
@@ -42,13 +42,13 @@ render(){
   return (
   <div style={{display:'flex', backgroundColor: 'dodgerblue',height:'90vh'}}>
     <div style={{marginTop:'5vh', width:'20%'}}>
-     <Link to= "/nav/productos/Aires/dual" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(0,e)}> LG DUAL Inverter 12,000 BTU </Link>
-     <Link to= "/nav/productos/Aires/dual" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(1,e)}> LG DUAL Inverter 18,000 BTU </Link>
-     <Link to= "/nav/productos/Aires/dual" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(2,e)}> LG DUAL Inverter 24,000 BTU </Link>
-     <Link to= "/nav/productos/Aires/artcool" className='button' style={{marginLeft: '5vh', display: 'block'}}> LG ARTCOOL 12,000 BTU </Link>
-     <Link to= "/nav/productos/Aires/artcool" className='button' style={{marginLeft: '5vh', display: 'block'}}> LG ARTCOOL 18,000 BTU </Link>
-     <Link to= "/nav/productos/Aires/artcool" className='button' style={{marginLeft: '5vh', display: 'block'}}> LG ARTCOOL 24,000 BTU </Link>
-     <Link to= "/nav/productos/Aires/portatil" className='button' style={{marginLeft: '5vh', display: 'block'}}> LG PORTÁTIL 14,000 BTU </Link>
+     <Link to= "/nav/productos/Aires/dualLG1" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(0,e)}> LG DUAL Inverter 12,000 BTU </Link>
+     <Link to= "/nav/productos/Aires/dualLGd2" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(1,e)}> LG DUAL Inverter 18,000 BTU </Link>
+     <Link to= "/nav/productos/Aires/dualLGd3" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(2,e)}> LG DUAL Inverter 24,000 BTU </Link>
+     <Link to= "/nav/productos/Aires/artcool1" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(3,e)}> LG ARTCOOL 12,000 BTU </Link>
+     <Link to= "/nav/productos/Aires/artcool2" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(4,e)}> LG ARTCOOL 18,000 BTU </Link>
+     <Link to= "/nav/productos/Aires/artcool3" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(5,e)}> LG ARTCOOL 24,000 BTU </Link>
+     <Link to= "/nav/productos/Aires/portatil" className='button' style={{marginLeft: '5vh', display: 'block'}} onClick={(e) => this.handleLink(6,e)}> LG PORTÁTIL 14,000 BTU </Link>
     </div>
     <div style={{width: '60%', marginTop:'5vh'}}>
      <img src={this.state.largeImg} style={{width:'100%'}} />
@@ -57,7 +57,7 @@ render(){
      <h1> L. {this.state.precioNuevo} <span style={{textDecoration: 'line-through', color: 'black'}}> L. {this.state.precioViejo}</span> </h1>
      <h2 style={{textAlign: 'center'}}> {this.state.capacidad} </h2>
      <p> Envíos e instalación gratuitas!! Te calendarizamos mantenimientos periodícos e automáticos para que logres mantener tu equipo como nuevo!</p>
-     <p> Pagalo en cuotas con extrafinancimiento. </p>
+     <p> Pagalo en cuotas con extrafinanciamiento. </p>
      <p> Invierte en marcas ahorradoras, la energía es cada dia mas cara! </p>
      <p> {this.state.bullet1} </p>
      <p> {this.state.bullet2} </p>
