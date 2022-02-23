@@ -1,5 +1,4 @@
 import React from 'react';
-import {Outlet, Link } from "react-router-dom";
 import Empresarial from './empresarial';
 
 const msjSolar = "Hemos realizado proyectos de mas de 350KW en zonas industriales y realizado estudios de decenas de Megavatios. Ahorrandole a nuestros clientes millones de lempiras anualmente. Ponte en contacto para ver como te podemos ayudar!"
@@ -15,10 +14,6 @@ class Solar extends React.Component {
 render(){
   return (
     <div style={{backgroundColor: 'dodgerblue', height:'90vh'}}>
-      <div>
-        <Link className='button' to='/nav/empresarial' style={{marginLeft: '5vh'}}> Climatización </Link>
-        <Link className='button' to='/nav/Solar' style={{marginLeft: '5vh'}}> Solar </Link>
-      </div>
       <Empresarial largeImg={largeImg} SmallImg={smallImg} msjGen={msjGeneral} titulo={estadoSolar} msgEspecifico={msjSolar} />
     </div>
   );

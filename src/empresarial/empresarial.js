@@ -1,15 +1,5 @@
 import React from 'react';
-
-const headerS ={
-  marginLeft: '5vh',
-}
-
-const divStyle ={
-  width: '100%',
-  marginRight: '5vh',
-  marginTop: '2vh',
-
-}
+import { Link } from "react-router-dom";
 
 const proyectoS = {
   fontFamily: 'droid sans',
@@ -23,7 +13,6 @@ class MultSlide extends React.Component{
 
     if (window.innerWidth > 500){
       this.state ={
-        w: '50%',
         url: this.props.largeImg,
         w2: '100vh',
         msjG: this.props.msjGen,
@@ -32,7 +21,6 @@ class MultSlide extends React.Component{
       }
     } else {
       this.state={
-        w: '100%',
         url: this.props.SmallImg,
         w2: '30vh',
         msjG: this.props.msjGen,
@@ -43,24 +31,30 @@ class MultSlide extends React.Component{
   }
   render(){
     return(
-      <div style={{display:'flex'}}>
-         <div style={{backgroundColor:'dodgerblue', width: this.state.w}}>
+      <div>
+        <Link className='button' to='/nav/empresarial' style={{marginLeft: '5vh'}}> Climatización </Link>
+        <Link className='button' to='/nav/Solar' style={{marginLeft: '5vh'}}> Solar </Link>
 
-           <img src={this.state.url} style={{width: this.state.w2}}
+       <div style={{display:'flex'}}>
+          <div style={{backgroundColor:'dodgerblue'}}>
+
+            <img src={this.state.url} style={{width: this.state.w2, float:'left', marginRight:'5vh'}}
             alt='Imagen de slideshow'/>
-        </div>
-         <div style={{backgroundColor: 'dodgerblue'}}>
-         <p style={{...proyectoS, ...headerS, fontSize:'2vh'}}>
-          {this.state.msjG}
-         </p>
-          <p style={{...proyectoS, ...headerS}}>
-            {this.state.titulo}
-            <p style={{...proyectoS, ...headerS, fontSize:'2vh'}}>
-            {this.state.msjEsp}
+
+            <p style={{...proyectoS}}>
+             {this.state.msjG}
             </p>
-          </p>
+             <p style={{...proyectoS}}>
+               {this.state.titulo}
+             </p>
+             <p style={{...proyectoS}}>
+             {this.state.msjEsp}
+             </p>
+
          </div>
-      </div>
+
+       </div>
+     </div>
     );
   }
 }

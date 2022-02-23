@@ -26,12 +26,20 @@ const inputStyle ={
 const initialFormState = { nombre: '', apellido: '', correo: '', numero: 0,
 interes: '', comentario: ''}
 
+const initalSizes = {inputWidth: '', inputHeight: '', hFontSize: '', pFontSize: ''}
+
 export default function Contactenos() {
   const [todos, setTodos] = useState([]);
   const [formData, setFormData] = useState(initialFormState);
+  const [sizes, setSizes] = useState(initalSizes);
 
   useEffect(() => {
-   }, []);
+    if (window.innerWidth > 500){
+      setSizes({ ...sizes, 'hFontSize': '3vh', 'pFontSize': '2.5vh', 'inputWidth': '35vh'});
+    } else {
+      setSizes({ ...sizes, 'hFontSize': '2vh', 'pFontSize': '1.8vh', 'inputWidth': '20vh'});
+    };
+  });
 
   function checkNull(){
     if (!formData.nombre || !formData.apellido || !formData.interes || formData.numero === 0 || !formData.correo){
@@ -55,37 +63,37 @@ export default function Contactenos() {
   return (
     <div style={{backgroundColor:'dodgerblue',height:'86vh'}}>
       <h2 style={{color:'white',fontFamily:'Droid Sans', textAlign:'center',
-    fontSize:'3vh'}}>
+    fontSize: sizes.hFontSize}}>
       Interesado? Contáctanos ya!</h2>
       <div style={{...divStyle}}>
         <div style={{marginRight:'5vh'}}>
-          <p style={{...pStyle}}> Nombre </p>
-          <input style={{...inputStyle}}
+          <p style={{...pStyle, fontSize: sizes.pFontSize}}> Nombre </p>
+          <input style={{...inputStyle, width: sizes.inputWidth}}
           onChange={e => setFormData({ ...formData, 'nombre': e.target.value})}
           value={formData.nombre}/>
         </div>
         <div>
-          <p style={{...pStyle}}> Apellido </p>
-          <input style={{...inputStyle}}
+          <p style={{...pStyle ,fontSize: sizes.pFontSize}}> Apellido </p>
+          <input style={{...inputStyle, width: sizes.inputWidth}}
           onChange={e => setFormData({ ...formData, 'apellido': e.target.value})}
           value={formData.apellido}/>
         </div>
       </div>
       <div style={{...divStyle}}>
         <div style={{marginRight:'5vh'}}>
-          <p style={{...pStyle}}> Correo Electrónico </p>
-          <input style={{...inputStyle}}
+          <p style={{...pStyle, fontSize: sizes.pFontSize}}> Correo Electrónico </p>
+          <input style={{...inputStyle, width: sizes.inputWidth}}
           onChange={e => setFormData({ ...formData, 'correo': e.target.value})}
           value={formData.correo}/>
         </div>
         <div>
-          <p style={{...pStyle}}> Numero Telefónico</p>
-          <input style={{...inputStyle}}
+          <p style={{...pStyle, fontSize: sizes.pFontSize}}> Numero Telefónico</p>
+          <input style={{...inputStyle, width: sizes.inputWidth}}
           onChange={e => setFormData({ ...formData, 'numero': e.target.value})}
           value={formData.numero}/>
         </div>
       </div>
-      <p style={{...pStyle,textAlign:'center'}}>Interés:</p>
+      <p style={{...pStyle,textAlign:'center', fontSize: sizes.pFontSize}}>Interés:</p>
       <div style={{...divStyle}}>
         <select name='interes' id='interes' style={{...inputStyle}}
         onChange={e => setFormData({ ...formData, 'interes': e.target.value})}
@@ -97,9 +105,9 @@ export default function Contactenos() {
           <option value='aire comercial'>Soluciones de Climatizacíon Comerciales e Industriales</option>
         </select>
      </div>
-     <p style={{...pStyle,textAlign:'center'}}>Comentario:</p>
+     <p style={{...pStyle,textAlign:'center', fontSize: sizes.pFontSize}}>Comentario:</p>
      <div style={{...divStyle}}>
-       <input style={{...inputStyle, width:'70vh'}}
+       <input style={{...inputStyle, width:'60vh'}}
        onChange={e => setFormData({ ...formData, 'comentario': e.target.value})}
        value={formData.comentario}/>
      </div>

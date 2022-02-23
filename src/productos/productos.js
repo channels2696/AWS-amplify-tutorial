@@ -21,7 +21,15 @@ const pStyle={
 class MultSlide extends React.Component{
   constructor(props){
     super(props);
-    this.state={
+
+    if (window.innerWidth > 500){
+      this.state ={
+        font: '2.8vh'
+      }
+    } else {
+      this.state={
+        font: '1.8vh'
+      };
     };
   }
 
@@ -29,10 +37,10 @@ class MultSlide extends React.Component{
     return(
       <div>
       <div style={{backgroundColor: 'dodgerblue', display: 'flex', justifyContent: 'center'}}>
-        <span style={{...pStyle}}> Escoja una Categoria: </span>
-        <Link className='button' to="/nav/productos/Aires/dualLG1"> Aires </Link>
-        <Link className='button' to="/nav/productos/Energia"> Energía </Link>
-        <Link className='button' to="/nav/productos/Instaladores"> Instaladores </Link>
+        <span style={{...pStyle, fontSize:this.state.font}}> Escoja una Categoria: </span>
+        <Link className='button' to="/nav/productos/Aires/dualLG1" style={{fontSize:this.state.font}}> Aires </Link>
+        <Link className='button' to="/nav/productos/Energia" style={{fontSize:this.state.font}}> Energía </Link>
+        <Link className='button' to="/nav/productos/Instaladores" style={{fontSize:this.state.font}}> Instaladores </Link>
       </div>
       <Outlet/>
       </div>
