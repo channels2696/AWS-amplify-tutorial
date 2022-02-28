@@ -34,7 +34,7 @@ export default function Contactenos() {
   const [sizes, setSizes] = useState(initalSizes);
 
   useEffect(() => {
-    if (window.innerWidth > 500){
+    if (window.innerWidth > 700){
       setSizes({ ...sizes, 'hFontSize': '3vh', 'pFontSize': '2.5vh', 'inputWidth': '35vh'});
     } else {
       setSizes({ ...sizes, 'hFontSize': '2vh', 'pFontSize': '1.8vh', 'inputWidth': '20vh'});

@@ -11,7 +11,7 @@ class MultSlide extends React.Component{
   constructor(props){
     super(props);
 
-    if (window.innerWidth > 500){
+    if (window.innerWidth > 700){
       this.state ={
         url: this.props.largeImg,
         w2: '100vh',

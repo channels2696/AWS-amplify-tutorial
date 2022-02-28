@@ -1,7 +1,7 @@
 import React from 'react';
 import ECOX from './Ecox';
 import {Link, Outlet } from "react-router-dom";
-import prueba from './ecox.jpeg'
+import prueba from './ecox.png'
 
 class Ecox extends React.Component {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import LG from './../LG';
 import {Link, Outlet } from "react-router-dom";
-import prueba from './../artcool.png';
+import prueba from './../ArtCool1.png';
 
 class ARTCOOL extends React.Component {
 

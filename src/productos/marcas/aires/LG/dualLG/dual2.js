@@ -1,7 +1,8 @@
 import React from 'react';
 import LG from './../LG';
 import {Link, Outlet } from "react-router-dom";
-import prueba from './../aire1.jpeg'
+import prueba from './../dual.png';
+
 
 class DUAL extends React.Component {
 

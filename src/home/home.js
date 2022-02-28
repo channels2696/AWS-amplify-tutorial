@@ -1,30 +1,17 @@
 import logoViento from './logoViento.png';
+import home from './ArtCool3.png';
 
 import React from 'react';
 
 const accessUrl = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/home1.png"
 const smallImg = "https://awswebsitereycaimgs171114-staging.s3.us-east-2.amazonaws.com/public/smallHome.jpg"
 
-class ResponsiveImage extends React.Component{
-  constructor(props){
-    super(props);
+function ResponsiveImage(){
 
-    if (window.innerWidth > 500){
-      this.state ={
-        url: accessUrl
-      }
-    } else {
-      this.state={
-        url: smallImg
-      };
-    };
-  }
-
-  render(){
     return(
-   <img src={this.state.url} style={{width:'50%'}}/>
+   <img src={home} style={{width:'50%', float:'left'}}/>
  );
-}
+
 }
 
 class Bullet extends React.Component{
@@ -83,7 +70,7 @@ class HomePage extends React.Component{
       }
     } else {
       this.state={
-        w: '0'
+        w: '30%'
       };
     };
   }
@@ -91,22 +78,14 @@ class HomePage extends React.Component{
   render(){
    return (
     <div style={{backgroundColor: 'dodgerblue'}}>
-     <div style={{display:'flex', justifyContent:'start'}}>
-      <ResponsiveImage/>
+      <img src={home} style={{width:'50%', float:'left'}}/>
 
-      <div style={{color:'white', width:'30%'}}>
       <p style={{marginLeft:'10%',fontFamily:'Anton',fontSize:'2.5vh',color:'white'}}> Trabaja con nosotros,
       trabaja con expertos... </p>
       <Bullet name='Proyectos' message='Diseñamos e instalamos proyectos solares y de climatización, brindamos las soluciones mas inovadoras que requieran nuestros clientes.'/>
       <Bullet name='Servicios'  message='Brindamos servicios de diseño, importación, instalación, supervisión, y hasta financiamiento.'/>
       <Bullet name='Productos' message='Distribuimos equipo de alta calidad, si eres instalador o cliente final, te encontrarás en buenas manos.'/>
-       </div>
-      <div style={{width: this.state.w}}>
-        <img src={logoViento} alt='Logo inferior'
-        style={{position:'static',marginTop:'30vh',right:'0', opacity:'60%',
-        width:'80%', height:'21.35vh'}}/>
-      </div>
-      </div>
+        <img src={logoViento} alt='Logo inferior' style={{width: this.state.w, float:'right'}}/>
     </div>
    );
  }

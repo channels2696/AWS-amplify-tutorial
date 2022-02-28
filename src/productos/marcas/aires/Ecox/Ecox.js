@@ -37,7 +37,7 @@ class Ecox extends React.Component {
   }
 
   setFonts(){
-    if (window.innerWidth > 500){
+    if (window.innerWidth > 700){
       return bigFonts;
     } else {
       return smallFonts;
@@ -45,7 +45,7 @@ class Ecox extends React.Component {
   }
 
   setMargins(){
-    if (window.innerWidth > 500){
+    if (window.innerWidth > 700){
       return bigMargin;
     } else {
       return smallMargin;

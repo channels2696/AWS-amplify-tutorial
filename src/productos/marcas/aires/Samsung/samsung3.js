@@ -1,7 +1,7 @@
 import React from 'react';
 import Samsung from './Samsung';
 import {Link, Outlet } from "react-router-dom";
-import prueba from './samsung.jpeg'
+import prueba from './samsung.png'
 
 class SAMSUNG extends React.Component {
 
