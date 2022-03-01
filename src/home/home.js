@@ -17,11 +17,21 @@ function ResponsiveImage(){
 class Bullet extends React.Component{
   constructor(props){
     super(props);
-    this.state ={
-      icon: '+ ',
-      name: this.props.name,
-      message: null,
-      changed: false,
+
+    if (window.innerWidth > 700){
+      this.state ={
+        icon: '+ ',
+        name: this.props.name,
+        message: null,
+        changed: false,
+      };
+    } else {
+      this.state ={
+        icon: '- ',
+        name: this.props.name,
+        message: this.props.message,
+        changed: true,
+      };
     };
   }
 
@@ -29,14 +39,12 @@ class Bullet extends React.Component{
     if (!this.state.changed){
       this.setState({
         icon: '- ',
-        name: '',
         message: this.props.message,
         changed: true,
       });
     } else {
       this.setState({
         icon: '+ ',
-        name: this.props.name,
         message: null,
         changed: false,
       });
