@@ -28,7 +28,7 @@ export default function Energia() {
 return (
   <div style={{backgroundColor: 'dodgerblue', height:'100vh'}}>
    <img src={solar} style={{width:'55%', float:'left'}} />
-    <h1 style={{...pStyle, fontSize: sizes.hFontSize}}> Contáctanos para brindarte una solución que baje tu factura eléctrica!!
+    <h1 style={{...pStyle, fontSize: sizes.hFontSize}}> Contáctanos para brindarte una solución de energía solar que baje tu factura eléctrica!!
      <p style={{...parStyle, fontSize: sizes.pFontSize}}> Si tu factura es mas de <span style={{color:'black'}}>L. 3,205</span> te vamos a brindar una solución altamente efectiva.
        <br/><br/> Por ejemplo, si consumes <span style={{color:'black'}}>L. 3,205</span>, te vas a ahorrar hasta <span style={{color:'black'}}>L. 2,190</span> mensuales. Entre mas alta tu factura,
        mas grande tu ahorro. <br/><br/> Contactános para mas información y cotizar ya! <br/><br/> Distribuimos equipo de alta calidad de
