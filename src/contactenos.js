@@ -39,7 +39,7 @@ export default function Contactenos() {
     } else {
       setSizes({ ...sizes, 'hFontSize': '2vh', 'pFontSize': '1.8vh', 'inputWidth': '20vh'});
     };
-  });
+  }, []);
 
   function checkNull(){
     if (!formData.nombre || !formData.apellido || !formData.interes || formData.numero === 0 || !formData.correo){
