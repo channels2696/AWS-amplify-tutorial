@@ -12,7 +12,7 @@ const smallFonts = ['1.5vh', '1.3vh'];
 const bigMargin = '5vh';
 const smallMargin = '0.5vh';
 
-const preciosN = ["11,219.99","36,939.99"];
+const preciosN = ["12,897.68","42,480.47"];
 const preciosV = ["14,589.99","48,029.99"];
 const capacidades = ["ECOX Inverter 12,000 BTU", "ECOX Inverter 36,000 BTU"];
 

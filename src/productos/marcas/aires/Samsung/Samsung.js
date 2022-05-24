@@ -11,7 +11,7 @@ const smallFonts = ['1.5vh', '1.3vh'];
 const bigMargin = '5vh';
 const smallMargin = '0.5vh';
 
-const preciosN = ["16,109.99","21,099.50","26,759.99"];
+const preciosN = ["15,078.17","19,692.25","26,136.93"];
 const preciosV = ["20,949.99","27,429.99","34,789.99"];
 const capacidades = ["Samsung Digital Inverter 12,000 BTU", "Samsung Digital Inverter 18,000 BTU", "Samsung Digital Inverter 24,000 BTU"];
 
@@ -69,7 +69,7 @@ render(){
      <Link to= "/nav/productos/Aires/samsung3" className='button' style={{marginLeft: this.state.margin, display: 'block', fontSize: this.state.fonts[0]}} onClick={(e) => this.handleLink(1,e)}> Samsung Digital Inverter 24,000 BTU </Link>
     </div>
     <div style={{width: '80%', marginTop:'2vh', ...description}}>
-      <h1 style={{fontSize: this.state.fonts[0],textAlign: 'center'}}> L. {this.state.precioNuevo} <span style={{textDecoration: 'line-through', color: 'black', fontSize: this.state.fonts[0]}}> L. {this.state.precioViejo}</span> </h1>
+      <h1 style={{fontSize: this.state.fonts[0],textAlign: 'center'}}> L. {this.state.precioNuevo}  </h1>
       <h2 style={{textAlign: 'center', fontSize: this.state.fonts[0]}}> {this.state.capacidad} </h2>
        <img src={this.state.largeImg} style={{width:'60%', float: 'left' ,marginRight: this.state.margin}} />
        <p style={{fontSize: this.state.fonts[1]}}> Envíos e instalación gratuitas!! Te calendarizamos mantenimientos periodícos e automáticos para que logres mantener tu equipo como nuevo!</p>

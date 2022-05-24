@@ -11,7 +11,7 @@ const bigFonts = ['3vh', '2vh'];
 const smallFonts = ['1.5vh', '1.3vh'];
 const bigMargin = '5vh';
 const smallMargin = '0.5vh';
-const preciosN = ["14,199.99","18,459.99","27,399.99","17,899.99","22,059.99","29,949.99","15,899.99"];
+const preciosN = ["14,903.23","19,380.17","28,761.69","17,899.99","22,059.99","29,949.99","16,694.58"];
 const preciosV = ["18,500.50","24,050.30","35,618.70","23,268.70","28,677.99","38,934.99","20,669.99"];
 const capacidades = ["LG DUAL Inverter 12,000 BTU", "LG DUAL Inverter 18,000 BTU", "LG DUAL Inverter 24,000 BTU", "LG ARTCOOL 12,000 BTU","LG ARTCOOL 18,000 BTU","LG ARTCOOL 24,000 BTU","LG PORTÁTIL 14,000 BTU"];
 
@@ -75,7 +75,7 @@ render(){
      <Link to= "/nav/productos/Aires/portatil" className='button' style={{marginLeft: this.state.margin, display: 'block', fontSize: this.state.fonts[0]}} onClick={(e) => this.handleLink(6,e)}> LG PORTÁTIL 14,000 BTU </Link>
     </div>
     <div style={{width: '80%', marginTop:'2vh', ...description}}>
-      <h1 style={{fontSize: this.state.fonts[0],textAlign: 'center'}}> L. {this.state.precioNuevo} <span style={{textDecoration: 'line-through', color: 'black', fontSize: this.state.fonts[0]}}> L. {this.state.precioViejo}</span> </h1>
+      <h1 style={{fontSize: this.state.fonts[0],textAlign: 'center'}}> L. {this.state.precioNuevo}</h1>
       <h2 style={{textAlign: 'center', fontSize: this.state.fonts[0]}}> {this.state.capacidad} </h2>
        <img src={this.state.largeImg} style={{width:'60%', float: 'left' ,marginRight: this.state.margin}} />
        <p style={{fontSize: this.state.fonts[1]}}> Envíos e instalación gratuitas!! Te calendarizamos mantenimientos periodícos e automáticos para que logres mantener tu equipo como nuevo!</p>
